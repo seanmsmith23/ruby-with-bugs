@@ -46,11 +46,7 @@ class Bugs
   end
 
   def states(letter)
-    result = []
-    @states.each do |state|
-      result << state if state[0] == letter
-    end
-    result
+    @states.map { |state| state if state[0] == letter }.compact
   end
 
 end
